@@ -1,5 +1,7 @@
-# git-github-masterclass
-All course files for the Git &amp; GitHub Masterclass on NetNinja.dev
+# Git & GitHub-Masterclass
+All course files for the Git &amp; GitHub Masterclass on NetNinja.dev.
+
+Access the course here: [link]: link.com
 
 ## Starter Projects
 - For the first starter project, select the starter-project-1 branch from the dropdown.
