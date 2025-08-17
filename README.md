@@ -1,5 +1,5 @@
 # 🚀 Git & GitHub Masterclass
-All course files for the Git &amp; GitHub Masterclass on NetNinja.dev.
+📂 All course files for the Git &amp; GitHub Masterclass on NetNinja.dev.
 
 🍿 Access the course here: ADD_LINK_LATER
 
