@@ -1,0 +1,915 @@
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@300;400;500;600&display=swap");
+
+/* Retro Gaming Color Scheme - Inspired by classic NES gamepad */
+:root {
+  --retro-dark: #2d2d2d;
+  --retro-grey: #3d3d3d;
+  --retro-light: #f7f7f7;
+  --retro-red: #d32f2f;
+  --retro-white: #ffffff;
+  --retro-shadow: rgba(42, 42, 42, 0.3);
+  --retro-letter-spacing: 2px;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--retro-white);
+  min-height: 100vh;
+  color: var(--retro-grey);
+  line-height: 1.6;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: "Jersey 10", cursive;
+  letter-spacing: var(--retro-letter-spacing);
+}
+
+/* Navbar styling */
+.navbar {
+  background: var(--retro-white);
+  border-bottom: 3px solid var(--retro-red);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  font-size: 2.2rem;
+  color: var(--retro-red);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px var(--retro-shadow);
+  font-weight: normal;
+  font-family: "Jersey 10", cursive;
+  letter-spacing: var(--retro-letter-spacing);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--retro-grey);
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.1s ease;
+}
+
+.nav-links a:hover {
+  color: var(--retro-red);
+}
+
+/* Main title styling */
+.main-title {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  border: 3px solid var(--retro-dark);
+  box-shadow: 0 8px 16px var(--retro-shadow);
+}
+
+.main-title h1 {
+  font-size: 3.5rem;
+  color: var(--retro-white);
+  text-shadow: 3px 3px 0px var(--retro-red);
+  margin-bottom: 1rem;
+  font-family: "Jersey 10", cursive;
+  letter-spacing: 2px;
+}
+
+.main-title .subtitle {
+  font-size: 1.2rem;
+  color: var(--retro-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Content area styling */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* Main Layout - Two Column */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.blog-section {
+  min-width: 0; /* Prevents grid overflow */
+}
+
+/* Sidebar Section */
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-widget {
+  background: var(--retro-light);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sidebar-widget h3 {
+  color: var(--retro-dark);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--retro-red);
+  padding-bottom: 0.5rem;
+}
+
+/* Categories */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.5rem 0;
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.category-item {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-grey);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.category-item:hover {
+  color: var(--retro-red);
+}
+
+.count {
+  font-size: 0.8rem;
+  color: var(--retro-red);
+  font-weight: 500;
+}
+
+/* Tag Cloud */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: 'Inter', sans-serif;
+  background: var(--retro-white);
+  color: var(--retro-grey);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--retro-red);
+  color: var(--retro-white);
+  border-color: var(--retro-red);
+}
+
+
+/* About Page Specific Styles */
+.about-topics {
+  margin: 2rem 0;
+}
+
+.topic-item {
+  background: var(--retro-light);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+  border-color: var(--retro-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item h3 {
+  color: var(--retro-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.topic-item p {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-grey);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+  margin: 2rem 0;
+  background: var(--retro-light);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.contact-form-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--retro-dark);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-dark);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: 'Inter', sans-serif;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+  background: var(--retro-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--retro-red);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.contact-submit-btn {
+  background: var(--retro-red);
+  color: var(--retro-white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+  box-shadow: 0 4px 0 #b71c1c;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #b71c1c;
+}
+
+.contact-submit-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b71c1c;
+}
+
+.contact-link {
+  color: var(--retro-red);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* NES Gamepad Card Styling */
+.gamepad-card {
+  display: flex;
+  align-items: center;
+  background: var(--retro-light);
+  border: 2px solid var(--retro-grey);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+/* Left side - D-Pad */
+.card-left {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpad {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.dpad-horizontal,
+.dpad-vertical {
+  background: var(--retro-grey);
+  position: absolute;
+  border-radius: 4px;
+}
+
+.dpad-horizontal {
+  width: 60px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.dpad-vertical {
+  width: 20px;
+  height: 60px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Center content */
+.card-content {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.card-content h3 {
+  color: var(--retro-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.card-content p {
+  color: var(--retro-grey);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Right side - Action buttons */
+.card-right {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.action-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--retro-red);
+  background: var(--retro-red);
+  color: var(--retro-white);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 0 #b71c1c;
+}
+
+.action-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #b71c1c;
+}
+
+.action-btn .arrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.action-btn .initials {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Author button styling */
+.author-btn {
+  background: var(--retro-white);
+  color: var(--retro-red);
+  border: 3px solid var(--retro-red);
+  box-shadow: 0 5px 0 #b71c1c;
+}
+
+.author-btn:hover {
+  background: var(--retro-red);
+  color: var(--retro-white);
+}
+
+/* Gaming Hints Section */
+.hints-section {
+  background: var(--retro-light);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 4rem;
+  padding: 4rem 0;
+}
+
+.hints-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hints-section h2 {
+  color: var(--retro-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hints-subtitle {
+  font-family: "Inter", sans-serif;
+  color: var(--retro-grey);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hint-card {
+  background: var(--retro-white);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hint-card:hover {
+  border-color: var(--retro-red);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.hint-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hint-card h3 {
+  color: var(--retro-dark);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.hint-card p {
+  font-family: "Inter", sans-serif;
+  color: var(--retro-grey);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Events Section */
+.events-section {
+  background: var(--retro-white);
+  padding: 4rem 0;
+}
+
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.events-section h2 {
+  color: var(--retro-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.events-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-grey);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.events-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.event-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--retro-light);
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  border-color: var(--retro-red);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  flex: 0 0 80px;
+  text-align: center;
+  background: var(--retro-red);
+  color: var(--retro-white);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-date .month {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-date .day {
+  font-family: 'Jersey 10', cursive;
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.event-content {
+  flex: 1;
+}
+
+.event-content h3 {
+  color: var(--retro-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.event-content p {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-grey);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.event-location {
+  font-family: 'Inter', sans-serif;
+  color: var(--retro-red);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Footer Styling */
+.footer {
+  border-top: 1px solid #eee;
+  background: var(--retro-light);
+  color: var(--retro-dark);
+  margin-top: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.footer-brand h3 {
+  color: var(--retro-red);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.footer-brand p {
+  font-family: "Inter", sans-serif;
+  color: var(--retro-grey);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+}
+
+.footer-section h4 {
+  color: var(--retro-dark);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--retro-grey);
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: var(--retro-red);
+}
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-family: "Inter", sans-serif;
+  color: #a0a0a0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .main-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  /* Responsive main layout */
+  .main-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar-section {
+    order: -1; /* Move sidebar above blog content on mobile */
+  }
+
+  .sidebar-widget {
+    padding: 1rem;
+  }
+
+  .tag-cloud {
+    gap: 0.3rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* Responsive contact form */
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Responsive gamepad card */
+  .gamepad-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .card-left,
+  .card-right {
+    flex: none;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .dpad {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dpad-horizontal {
+    width: 50px;
+    height: 16px;
+  }
+
+  .dpad-vertical {
+    width: 16px;
+    height: 50px;
+  }
+
+  /* Responsive hints section */
+  .hints-section {
+    padding: 3rem 0;
+  }
+
+  .hints-container {
+    padding: 0 1rem;
+  }
+
+  .hints-section h2 {
+    font-size: 2rem;
+  }
+
+  .hints-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hint-card {
+    padding: 1.5rem;
+  }
+
+  /* Responsive events section */
+  .events-section {
+    padding: 3rem 0;
+  }
+
+  .events-container {
+    padding: 0 1rem;
+  }
+
+  .events-section h2 {
+    font-size: 2rem;
+  }
+
+  .events-timeline {
+    max-width: 100%;
+  }
+
+  .event-item {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .event-date {
+    flex: 0 0 70px;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .event-date .day {
+    font-size: 1.5rem;
+  }
+
+  /* Responsive footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem;
+  }
+}
